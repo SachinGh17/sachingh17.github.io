@@ -1,0 +1,174 @@
+<!-- Innovative Personal Portfolio for GitHub Pages -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sachin Ghanteppagol | Software Test Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-light: rgba(37,99,235,0.1);
+      --card: #ffffff;
+      --radius: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+    *{box-sizing:border-box;transition:all 0.3s ease}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.6;scroll-behavior:smooth}
+    header{display:flex;align-items:center;justify-content:space-between;padding:24px 60px;background:var(--card);box-shadow:0 4px 18px rgba(0,0,0,0.05);position:sticky;top:0;z-index:99}
+    header h1{font-size:20px;color:var(--accent)}
+    nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:80px 60px;gap:30px}
+    .hero-text{flex:1 1 400px}
+    .hero h2{font-size:32px;margin-bottom:12px}
+    .hero p{color:var(--muted);max-width:600px}
+    .hero img{width:250px;height:250px;border-radius:50%;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+
+    .btn{background:var(--accent);color:#fff;padding:10px 20px;border-radius:var(--radius);text-decoration:none;font-weight:600;display:inline-block;margin-top:20px}
+    .btn:hover{background:#1d4ed8;transform:translateY(-2px)}
+
+    section{padding:60px}
+    h2.section-title{text-align:center;font-size:28px;margin-bottom:30px;position:relative}
+    h2.section-title::after{content:'';position:absolute;width:60px;height:4px;background:var(--accent);left:50%;transform:translateX(-50%);bottom:-10px;border-radius:2px}
+
+    .timeline{display:grid;gap:20px;max-width:900px;margin:0 auto}
+    .job{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 16px rgba(0,0,0,0.05)}
+    .job:hover{transform:translateY(-4px);}
+    .job h3{margin:0;color:var(--accent)}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
+
+    .skills-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .skill{background:var(--accent-light);padding:10px 16px;border-radius:999px;font-weight:600;color:var(--accent)}
+    .skill:hover{background:var(--accent);color:white;}
+
+    .project-card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 16px rgba(0,0,0,0.05);transition:transform 0.3s}
+    .project-card:hover{transform:translateY(-4px)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+
+    footer{text-align:center;padding:40px;color:var(--muted);background:var(--card);margin-top:40px;box-shadow:0 -4px 16px rgba(0,0,0,0.05)}
+    footer a{color:var(--accent);text-decoration:none;font-weight:600}
+    footer a:hover{text-decoration:underline}
+
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    [data-animate]{opacity:0;animation:fadeInUp 1s forwards}
+    [data-delay="1"]{animation-delay:0.3s}
+    [data-delay="2"]{animation-delay:0.6s}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sachin Ghanteppagol</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <div class="hero-text" data-animate>
+      <h2>Software Test Engineer</h2>
+      <p>I'm a passionate QA engineer with 4 years of experience specializing in Functional, Regression and Automation Testing. Skilled in Selenium, BDD (Cucumber), Core Java, and Agile methodologies — ensuring every release is efficient and defect-free.</p>
+      <a href="mailto:sachinghanteppagol17@gmail.com" class="btn">Get in Touch</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Sachin Photo" data-animate data-delay="1">
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline" data-animate>
+      <div class="job">
+        <h3>Software Test Engineer — Accenture Technology</h3>
+        <div class="meta">Aug 2024 – Present | Pune, India</div>
+        <ul>
+          <li>Performed end-to-end testing: planning, design, execution & reporting.</li>
+          <li>Created Page Object Models and automated tests with Selenium + Java.</li>
+          <li>Improved test coverage & efficiency with BDD Cucumber automation.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Software Test Engineer — Eviden Pvt Ltd</h3>
+        <div class="meta">Jul 2021 – Jul 2024 | Pune, India</div>
+        <ul>
+          <li>Handled Smoke, Functional & Regression Testing using JIRA, HP-ALM.</li>
+          <li>Participated in Agile ceremonies and conducted root cause analysis.</li>
+          <li>Automated GUI tests, improving product reliability and speed.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid" data-animate>
+      <span class="skill">Core Java</span>
+      <span class="skill">Selenium</span>
+      <span class="skill">BDD / Cucumber</span>
+      <span class="skill">TestNG</span>
+      <span class="skill">Jenkins</span>
+      <span class="skill">XPath</span>
+      <span class="skill">Rest Assured</span>
+      <span class="skill">JIRA</span>
+      <span class="skill">Azure DevOps</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">HP-ALM</span>
+      <span class="skill">GitHub</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects" data-animate>
+      <div class="project-card">
+        <h3>Fedex PIECE</h3>
+        <p>Developed test strategy and test cases, achieving 40% coverage increase. Conducted end-to-end validation across UI and backend.</p>
+      </div>
+      <div class="project-card">
+        <h3>Fedex Custom Netrates</h3>
+        <p>Designed 450+ test cases, validated pricing setup, automated regression with Selenium + Java.</p>
+      </div>
+      <div class="project-card">
+        <h3>General Rate Increase</h3>
+        <p>Automated UI test suites with TestNG & Page Object Model; trained 4 engineers for test methodology.</p>
+      </div>
+      <div class="project-card">
+        <h3>Rerate Duties and Taxes</h3>
+        <p>Created 120+ manual & automation cases validating new ADT rerate GUI, increasing QA efficiency by 30%.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div style="text-align:center" data-animate>
+      <p>Email: <a href="mailto:sachinghanteppagol17@gmail.com">sachinghanteppagol17@gmail.com</a></p>
+      <p>Phone: +91-9008953628</p>
+      <p><a href="https://www.linkedin.com/in/sachinghanteppagol/" target="_blank">LinkedIn</a> | <a href="#">GitHub</a></p>
+      <a href="#about" class="btn">Back to Top</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sachin Ghanteppagol | Built with ❤️ and HTML
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.animationPlayState='running';}
+      });
+    }, {threshold:0.1});
+    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
