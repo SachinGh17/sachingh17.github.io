@@ -331,9 +331,10 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   padding: 0;
+  padding-top: 15px;
   line-height: 1px;
   margin: 0 0 20px 0;
   letter-spacing: 2px;
@@ -376,17 +377,72 @@ section .container {
 
 .about-me .content ul li {
   padding-bottom: 10px;
+  
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap; /* enables stacking on smaller screens */
 }
 
-.about-me .content ul i {
-  font-size: 20px;
-  padding-right: 2px;
-  color: #1c7d32;
+.about-text {
+  flex: 1;              /* paragraph takes remaining space */
+  min-width: 250px;
 }
 
-.about-me .content p:last-child {
-  margin-bottom: 0;
+.profile-image img {
+  width: 250px;         /* adjust size */
+  height: 250px;        /* makes it a perfect circle */
+  object-fit: cover;    /* ensures image fits properly */
+  border-radius: 50%;   /* circular shape */
+  border: 3px solid #ddd;
+  flex-shrink: 0;         /* prevents shrinking in flexbox */
+  display: block;   
 }
+
+
+/*--------------------------------------------------------------
+# Experience
+--------------------------------------------------------------*/
+.experience h4 {
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+}
+
+.experience h3 {
+  color: #12d640;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.experience p{
+  font-size: 13px;
+  font-style: italic;
+}
+
+.experience .icon-box {
+  background-color: #072f5a;;       /* White background for the block */
+  border: 1px solid #ddd;       /* Light grey border */
+  border-radius: 10px;          /* Rounded corners */
+  padding: 20px;                /* Inner spacing */
+  margin-bottom: 20px;          /* Space between blocks */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  cursor: pointer;              /* Cursor changes to pointer on hover */
+}
+
+.experience .icon-box:hover {
+  background-color: #205386;   /* Light blue on hover */
+  transform: translateY(-3px);  /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Slightly bigger shadow */
+}
+
 
 /*--------------------------------------------------------------
 # Counts
@@ -432,37 +488,7 @@ section .container {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 50px;
-  display: block;
-  background: none;
-}
 
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: .9s;
-  background-color: #1c7d32;
-}
 
 /*--------------------------------------------------------------
 # Interests
@@ -645,7 +671,7 @@ section .container {
 .services .icon-box {
   text-align: center;
   background: #09203a;
-  padding: 40px 40px;
+  padding: 20px 15px;
   transition: all ease-in-out 0.3s;
   margin: 10px
 }
