@@ -1,9 +1,4 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 !(function($) {
   "use strict";
 
@@ -149,3 +144,20 @@
   });
 
 })(jQuery);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const startDate = new Date(2021, 7); // Month is 0-indexed: 0=Jan, 4=May
+    const now = new Date();
+
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    const experienceString = `${years}.${months} years`;
+    document.getElementById("experience").textContent = experienceString;
+});
