@@ -159,5 +159,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const experienceString = `${years}.${months} years`;
-    document.getElementById("experience").textContent = experienceString;
+    document.getElementById("experience-var").textContent = experienceString;
 });
